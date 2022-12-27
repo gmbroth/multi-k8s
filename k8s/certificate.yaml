@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+ 
+kind: Certificate
+metadata:
+  name: garrybrother-com-tls
+spec:
+  secretName: garrybrother-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: garrybrother.com
+  dnsNames:
+    - garrybrother.com
+    - www.garrybrother.com
